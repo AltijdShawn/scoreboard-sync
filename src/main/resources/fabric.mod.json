@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "scoreboard-sync",
+	"version": "${version}",
+	"name": "Scoreboard Sync",
+	"description": "This is a mod that sends all scoreboard data to a web server",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/scoreboard-sync/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"nl.xa_emiloetjex.scoreboardsync.ScoreboardSync"
+		],
+		"client": [
+			"nl.xa_emiloetjex.scoreboardsync.ScoreboardSyncClient"
+		],
+		"fabric-datagen": [
+			"nl.xa_emiloetjex.scoreboardsync.ScoreboardSyncDataGenerator"
+		]
+	},
+	"mixins": [
+		"scoreboard-sync.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
